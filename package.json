@@ -1,0 +1,36 @@
+{
+  "name": "ion-m-lib",
+  "version": "0.0.22",
+  "description": "",
+  "main": "dist/IonManaLib.js",
+  "types": "dist/IonManaLib.d.ts",
+  "author": "misixonesto",
+  "license": "MIT",
+  "scripts": {
+    "prepublish": "tsc"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^3.5.2",
+    "@types/jsdom": "^12.2.4",
+    "@types/lodash": "^4.14.149",
+    "@types/moxios": "^0.4.9",
+    "@types/node": "^13.9.3",
+    "jasmine": "^3.5.0",
+    "jasmine-spec-reporter": "^4.2.1",
+    "jasmine-ts": "^0.3.0",
+    "jsdom": "^16.0.1",
+    "lodash": "^4.17.15",
+    "moxios": "^0.4.0",
+    "ts-loader": "^6.2.1",
+    "ts-node": "^8.7.0",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "@angular/core": "^8.2.14",
+    "java-m-lib": "0.0.23",
+    "rxjs": "^6.5.1"
+  }
+}
