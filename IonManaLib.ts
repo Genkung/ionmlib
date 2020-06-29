@@ -108,6 +108,11 @@ export class IonManaLib {
         return this.retry(() => manaSvc.initOptionDialog(mcid, callBack));
     }
 
+    public async setGpsSection(address: string, latitude: string, longitude: string, phoneNumber: string, remark: string) {
+        var manaSvc = await manawallib.GetLib();
+        return manaSvc.setGpsSection(address, latitude, longitude, phoneNumber, remark);
+    }
+
     private retry(fn: () => Promise<{}>, intervals = [10000,3000]) {
         return new Promise((resolve, reject) => {
             let fn2call = fn;
