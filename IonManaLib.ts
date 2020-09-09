@@ -22,12 +22,12 @@ export class IonManaLib {
 
     public async getApiData(mcid: string): Promise<any> {
         var manaSvc = await manawallib.GetLib();
-        return this.retry(() => manaSvc.getApiData(mcid));
+        return manaSvc.getApiData(mcid);
     }
 
     public async getApiDataWithEndpointId(mcid: string, endpointId: string): Promise<any> {
         var manaSvc = await manawallib.GetLib();
-        return this.retry(() => manaSvc.getApiDataWithEndpointId(mcid, endpointId));
+        return manaSvc.getApiDataWithEndpointId(mcid, endpointId);
     }
 
     public async submitFormData(mcid: string, data: any, manualClose: boolean = false) {
@@ -42,7 +42,7 @@ export class IonManaLib {
 
     public async callApiGet(mcid: string, url: string): Promise<any> {
         var manaSvc = await manawallib.GetLib();
-        return this.retry(() => manaSvc.callApiGet(mcid, url));
+        return manaSvc.callApiGet(mcid, url);
     }
 
     public async callApiPost(mcid: string, data: any): Promise<any> {
