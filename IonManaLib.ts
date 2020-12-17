@@ -108,9 +108,9 @@ export class IonManaLib {
         return this.retry(() => manaSvc.initOptionDialog(mcid, callBack));
     }
 
-    public async setGpsSection(address: string, latitude: string, longitude: string, phoneNumber: string, remark: string) {
+    public async setGpsSection(title: string, realm: string, subDistrict: string, district: string, province: string, postalCode: string, accuracy: number, latitude: number, longitude: number, phoneNumber: string, remark: string) {
         var manaSvc = await manawallib.GetLib();
-        return manaSvc.setGpsSection(address, latitude, longitude, phoneNumber, remark);
+        return manaSvc.setGpsSection(title, realm, subDistrict, district, province, postalCode, accuracy, latitude, longitude, phoneNumber, remark);
     }
 
     public async getGpsLocation(mcid: string) {
@@ -118,7 +118,7 @@ export class IonManaLib {
         return manaSvc.getGpsLocation(mcid);
     }
 
-    private retry(fn: () => Promise<{}>, intervals = [10000,3000]) {
+    private retry(fn: () => Promise<{}>, intervals = [10000, 3000]) {
         return new Promise((resolve, reject) => {
             let fn2call = fn;
             if (intervals.length > 0) {
