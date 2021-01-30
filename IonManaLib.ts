@@ -118,6 +118,10 @@ export class IonManaLib {
         return manaSvc.getGpsLocation(mcid);
     }
 
+    public getDisplayCurrencyAmount(monetary: MonetaryValue): number {
+        return manawallib.GetDisplayCurrencyAmount(monetary);
+    }
+
     private retry(fn: () => Promise<{}>, intervals = [10000, 3000]) {
         return new Promise((resolve, reject) => {
             let fn2call = fn;
@@ -168,4 +172,10 @@ export class confirmMessage {
         this.confirmText = confirmText;
         this.cancelText = cancelText;
     }
+}
+
+export interface MonetaryValue
+{
+    currency:string;
+    amount:number;
 }
