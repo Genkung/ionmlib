@@ -118,8 +118,16 @@ export class IonManaLib {
         return manaSvc.getGpsLocation(mcid);
     }
 
-    public getDisplayCurrencyAmount(monetary: MonetaryValue): number {
-        return manawallib.GetDisplayCurrencyAmount(monetary);
+    public getAmount(monetary: MonetaryValue): number {
+        return manawallib.GetAmount(monetary);
+    }
+
+    public getCurrency(monetary: MonetaryValue): string {
+        return manawallib.GetCurrency(monetary);
+    }
+
+    public getDisplay(monetary: MonetaryValue): MonetaryValue {
+        return manawallib.GetDisplay(monetary);
     }
 
     private retry(fn: () => Promise<{}>, intervals = [10000, 3000]) {
@@ -174,8 +182,4 @@ export class confirmMessage {
     }
 }
 
-export interface MonetaryValue
-{
-    currency:string;
-    amountUnit:number;
-}
+export interface MonetaryValue{}
