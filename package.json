@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@angular/core": "^8.2.14",
-    "java-m-lib": "0.0.35",
+    "java-m-lib": "0.0.36",
     "rxjs": "^6.5.1"
   }
 }

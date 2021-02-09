@@ -126,7 +126,7 @@ export class IonManaLib {
         return manawallib.GetCurrency(monetary);
     }
 
-    public getMonetaryDisplay(monetary: MonetaryValue): MonetaryValue {
+    public getMonetaryDisplay(monetary: MonetaryValue): string {
         return manawallib.GetMonetaryDisplay(monetary);
     }
 
