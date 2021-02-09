@@ -126,8 +126,8 @@ export class IonManaLib {
         return manawallib.GetCurrency(monetary);
     }
 
-    public getDisplay(monetary: MonetaryValue): MonetaryValue {
-        return manawallib.GetDisplay(monetary);
+    public getMonetaryDisplay(monetary: MonetaryValue): MonetaryValue {
+        return manawallib.GetMonetaryDisplay(monetary);
     }
 
     private retry(fn: () => Promise<{}>, intervals = [10000, 3000]) {
